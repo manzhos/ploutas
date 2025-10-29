@@ -16,10 +16,10 @@ export default function Section({ id, title, children, image, reverse }) {
       }}
     >
       <Box sx={{ flex: 1, p: 3 }}>
-        <Typography variant="h5" fontWeight="bold" color="#0a1445" gutterBottom>
+        <Typography variant="h5" fontWeight="bold" color="#B6915D" sx={{ fontSize: '28pt' }} gutterBottom>
           {title}
         </Typography>
-        <Typography variant="body1" component="div">{children}</Typography>
+        <Typography variant="body1" component="div" color="#333333" >{children}</Typography>
       </Box>
       {/* <Box sx={{ flex: 1 }}>
         <img src={image} alt={title} style={{ width: "100%", borderRadius: 4 }} />

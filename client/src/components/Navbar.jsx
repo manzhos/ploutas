@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import { Box, IconButton, Typography, Link } from "@mui/material";
+import { Box, IconButton, Typography, Link, useMediaQuery } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('md'));
 
   const containerVariants = {
     hidden: { x: "-100%", opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.6, ease: "easeInOut" },
-    },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeInOut" } },
     exit: { x: "-100%", opacity: 0, transition: { duration: 0.5 } },
   };
 
@@ -31,58 +30,87 @@ export default function Navbar() {
     visible: { opacity: 1, y: 0, transition: { delay: 1, duration: 0.8, ease: "easeOut" } },
   };
 
-  const scrollToSection = (id) => {
-    console.log(id)
-    const section = document.getElementById(id);
-    console.log('section', section)
+  const goTo = (path) => {
+    navigate(path);
+    setOpen(false);
+  };
 
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setOpen(false);
-    }
+  const goToSection = (id) => {
+    navigate("/", { state: { scrollTo: id } });
+    setOpen(false);
   };
 
   return (
     <>
-      {/* Sidebar Container */}
-      <Box
-        sx={{
-          position: "fixed",
-          left: 0,
-          top: 0,
-          height: "100vh",
-          width: { xs: "70px", md: "220px" },
-          bgcolor: "white",
-          color: "#0a1445",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "center",
-          py: 3,
-          zIndex: 1300,
-          boxShadow: "2px 0 8px rgba(0,0,0,0.05)",
-        }}
-      >
-        {/* Logo */}
-        <Box sx={{ textAlign: "center" }}>
-          <img src="/images/logo_pc.svg" alt="Ploutas Capital" style={{ width: "100%", maxWidth: 160, marginBottom: 16 }} />
-        </Box>
+      {/* Desktop Sidebar */}
+      {!isMobile && (
+        <Box
+          sx={{
+            position: "fixed",
+            left: 0,
+            top: 0,
+            height: "100vh",
+            width: "220px",
+            bgcolor: "white",
+            color: "#1E325C",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+            py: 3,
+            zIndex: 1300,
+            boxShadow: "2px 0 8px rgba(0,0,0,0.05)",
+          }}
+        >
+          {/* Logo */}
+          <Box sx={{ textAlign: "center", cursor: "pointer" }} onClick={() => goTo('/')}> 
+            <img src="/images/logo_pc.svg" alt="Ploutas Capital" style={{ width: "100%", maxWidth: 160, marginBottom: 16 }} />
+          </Box>
 
-        {/* Burger button */}
-        <IconButton onClick={() => setOpen(true)} sx={{ color: "#0a1445", mb: "auto", mt: 2 }}>
-          <img src="/images/menu_btn.svg" alt="Menu" style={{ width: "80%", maxWidth: 60 }} />
-          {/* <MenuIcon sx={{ fontSize: 36 }} /> */}
-        </IconButton>
+          {/* Burger button */}
+          <IconButton onClick={() => setOpen(true)} sx={{ color: "#1E325C", mb: "auto", mt: 2 }}>
+            <img src="/images/menu_btn.svg" alt="Menu" style={{ width: "80%", maxWidth: 60 }} />
+          </IconButton>
 
-        {/* Contact info */}
-        <Box sx={{ textAlign: "center", fontSize: 12 }}>
-          <Typography sx={{ mb: 0.5, fontWeight: 600 }}>Contact</Typography>
-          <Typography>+44 (0) 20 7692 5686</Typography>
-          <Link href="mailto:info@ploutas.co.uk" color="#0a1445" underline="hover">
-            info@ploutas.co.uk
-          </Link>
+          {/* Contact info */}
+          <Box sx={{ textAlign: "center", fontSize: 12 }}>
+            <Typography sx={{ mb: 0.5, fontWeight: 600 }}>Contact</Typography>
+            <Typography>+44 (0) 20 7692 5686</Typography>
+            <Link href="mailto:info@ploutas.co.uk" color="#1E325C" underline="hover">
+              info@ploutas.co.uk
+            </Link>
+          </Box>
         </Box>
-      </Box>
+      )}
+
+      {/* Mobile Top Bar */}
+      {isMobile && (
+        <Box
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 64,
+            bgcolor: "#fff",
+            color: "#1E325C",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            px: 2,
+            zIndex: 1300,
+            boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+          }}
+        >
+          {/* Logo */}
+          <Box sx={{ textAlign: "center", cursor: "pointer" }} onClick={() => goTo('/')}> 
+            <img src="/images/logo_pc_small.svg" alt="Ploutas Capital" style={{ height: "50px", marginTop: 6 }} />
+          </Box>
+          <IconButton onClick={() => setOpen(true)} color="inherit">
+            <MenuIcon sx={{ fontSize: 32 }} />
+          </IconButton>
+        </Box>
+      )}
 
       {/* Animated Fullscreen Menu */}
       <AnimatePresence>
@@ -100,7 +128,7 @@ export default function Navbar() {
               width: "100%",
               height: "100vh",
               backgroundColor: "white",
-              color: "#0a1445",
+              color: "#1E325C",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -111,13 +139,13 @@ export default function Navbar() {
           >
             {/* Top bar with logo and close */}
             <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <img src="/images/logo_pc.svg" alt="Ploutas" style={{ height: 80 }} />
-              <IconButton onClick={() => setOpen(false)} sx={{ color: "#0C1C47" }}>
-                <CloseIcon sx={{ fontSize: 36 }} />
+              <img src="/images/logo_pc.svg" alt="Ploutas" style={{ height: 60 }} />
+              <IconButton onClick={() => setOpen(false)} sx={{ color: "#1E325C" }}>
+                <CloseIcon sx={{ fontSize: 32 }} />
               </IconButton>
             </Box>
 
-            {/* Content columns */}
+            {/* Menu Content */}
             <Box sx={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Box
                 sx={{
@@ -126,31 +154,34 @@ export default function Navbar() {
                   gap: { xs: 5, md: 8 },
                   width: "100%",
                   maxWidth: 1200,
+                  margin: isMobile ? "30px auto" : "0 auto",
                 }}
               >
                 {[0, 1, 2].map((i) => (
                   <motion.div key={i} custom={i} variants={columnVariants} initial="hidden" animate="visible">
                     {i === 0 && (
                       <>
-                        <Typography onClick={() => scrollToSection("private-lending")}    sx={{ cursor: 'pointer', mb: 1, fontWeight: 600, fontSize: 20, color: '#0C1C47' }}>Private Lending</Typography>
-                        <Typography onClick={() => scrollToSection("capital-advisory")}   sx={{ cursor: 'pointer', mb: 1, fontWeight: 600, fontSize: 20, color: '#0C1C47' }}>Capital Advisory</Typography>
-                        <Typography onClick={() => scrollToSection("family-office")}      sx={{ cursor: 'pointer', mb: 1, fontWeight: 600, fontSize: 20, color: '#0C1C47' }}>Family Office</Typography>
-                        <Typography onClick={() => scrollToSection("esg-sustainability")} sx={{ cursor: 'pointer', fontWeight: 600, fontSize: 20, color: '#0C1C47' }}>ESG / Sustainability</Typography>
+                        <Typography onClick={() => goToSection("private-lending")} sx={{ cursor: 'pointer', mb: 1, fontWeight: 600, fontSize: 20 }}>Private Lending</Typography>
+                        <Typography onClick={() => goToSection("capital-advisory")} sx={{ cursor: 'pointer', mb: 1, fontWeight: 600, fontSize: 20 }}>Capital Advisory</Typography>
+                        <Typography onClick={() => goToSection("family-office")} sx={{ cursor: 'pointer', mb: 1, fontWeight: 600, fontSize: 20 }}>Family Office</Typography>
+                        <Typography onClick={() => goToSection("esg-sustainability")} sx={{ cursor: 'pointer', fontWeight: 600, fontSize: 20 }}>ESG / Sustainability</Typography>
                       </>
                     )}
                     {i === 1 && (
                       <>
-                        <Typography sx={{ mb: 1, fontWeight: 600, fontSize: 20, color: '#0C1C47' }}>News & Insights</Typography>
-                        <Typography sx={{ fontWeight: 600, fontSize: 20, color: '#0C1C47' }}>Careers</Typography>
+                        <Typography onClick={() => goTo('/about')} sx={{ cursor: 'pointer', mb: 1, fontWeight: 600, fontSize: 20 }}>About Us</Typography>
+                        <Typography onClick={() => goTo('/news')} sx={{ cursor: 'pointer', mb: 1, fontWeight: 600, fontSize: 20 }}>News & Insights</Typography>
+                        <Typography onClick={() => goTo('/careers')} sx={{ cursor: 'pointer', fontWeight: 600, fontSize: 20 }}>Careers</Typography>
                       </>
                     )}
                     {i === 2 && (
                       <>
-                        <Typography sx={{ mb: 1, fontWeight: 600, fontSize: 20, color: '#0C1C47' }}>Contact</Typography>
-                        <Typography sx={{ fontSize: 14, color: '#0C1C47' }}>
-                          Ploutas Associates Ltd.<br />3rd Floor, 207 Regent Street<br />London, W1B 3HH, UK
+                        <Typography sx={{ mb: 1, fontWeight: 600, fontSize: 20 }}>Contact</Typography>
+                        <Typography sx={{ fontSize: 14 }}>
+                          Ploutas Associates Ltd.<br />
+                          <span style={{ color: '#B6915D' }}>3rd Floor, 207 Regent Street<br />London, W1B 3HH, UK</span>
                         </Typography>
-                        <Typography sx={{ mt: 1, fontSize: 14, color: '#0C1C47' }}>
+                        <Typography sx={{ mt: 1, fontSize: 14 }}>
                           info@ploutas.co.uk<br />+44 20 1234 5678
                         </Typography>
                       </>
@@ -159,6 +190,7 @@ export default function Navbar() {
                 ))}
               </Box>
             </Box>
+
             {/* Animated Bottom Image */}
             <motion.div
               alt="Menu Background"
@@ -173,10 +205,8 @@ export default function Navbar() {
                 backgroundImage: 'url("/images/build_menu.jpg")',
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                overflow: "hidden",
               }}
-            >
-            </motion.div>
+            />
           </motion.div>
         )}
       </AnimatePresence>

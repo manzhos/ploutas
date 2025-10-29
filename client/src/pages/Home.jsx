@@ -1,5 +1,6 @@
-import React from "react";
-import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
@@ -10,47 +11,22 @@ import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 
-const theme = createTheme({
-  typography: {
-    fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-    allVariants: {
-      WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale',
-    },
-    h1: {
-      letterSpacing: '0.03em',
-      fontWeight: 700,
-    },
-    h2: {
-      letterSpacing: '0.03em',
-      fontWeight: 700,
-    },
-    h3: {
-      letterSpacing: '0.02em',
-      fontWeight: 600,
-    },
-    h4: {
-      letterSpacing: '0.02em',
-      fontWeight: 600,
-    },
-    h5: {
-      letterSpacing: '0.015em',
-      fontWeight: 500,
-    },
-    h6: {
-      letterSpacing: '0.01em',
-      fontWeight: 500,
-    },
-    body1: {
-      letterSpacing: '0.005em',
-    },
-  },
-});
-
 export default function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const el = document.getElementById(location.state.scrollTo);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state]);
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <Navbar />
       <Hero />
 
@@ -104,6 +80,6 @@ export default function Home() {
       {/* <ParallaxImage image="/images/parallax3.jpg" height="45vh" speed={10} /> */}
 
       {/* <Footer /> */}
-    </ThemeProvider>
+    </>
   );
 }

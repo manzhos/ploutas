@@ -1,7 +1,10 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -19,19 +22,19 @@ export default function Hero() {
         backgroundColor: "rgba(10, 20, 69, 0.85)",
         // backgroundBlendMode: "screen",
         backgroundBlendMode: "multiply",
-        ml: { md: "220px" },
+        ml: { xs: "0px", md: "220px" },
         px: 3,
       }}
     >
-      <Typography variant="h3" sx={{ mb: 3 }}>
+      <Typography sx={{ mb: 3, fontSize: '36pt', fontWeight: 700 }}>
         Private Structured Capital Solutions <br /> for Real Estate and Other Special Situations
       </Typography>
       <Button
         variant="contained"
         sx={{
           mt: 2,
-          bgcolor: "white",
-          color: "#0a1445",
+          bgcolor: "#B6915D",
+          color: "#ffffff",
           borderRadius: "50px",
           px: 4,
           py: 1,
@@ -39,6 +42,7 @@ export default function Hero() {
           textTransform: "none",
           "&:hover": { bgcolor: "#f0f0f0" },
         }}
+        onClick={() => navigate('/about')}
       >
         About Us
       </Button>
