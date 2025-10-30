@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import News from './pages/News';
 import Careers from './pages/Careers';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiesPolicy from './pages/CookiesPolicy';
 
 import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
 
@@ -54,6 +56,8 @@ export default function App() {
           <Route path='/about' element={<About />} />
           <Route path='/careers' element={<Careers />} />
           <Route path='/news' element={<News />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/cookies-policy' element={<CookiesPolicy />} />
         </Routes>
       </Router>
     </ThemeProvider>

@@ -4,6 +4,7 @@ import { Box, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Section from "../components/Section";
+import Footer from "../components/Footer";
 
 export default function Careers() {
   return (
@@ -49,6 +50,8 @@ export default function Careers() {
         If you are inspired to <b>shape the future of private capital with purpose</b>, we invite you to connect.
         <br /><br /><br /><a href="mailto:careers@ploutas.co.uk" style={{ color:'#B6915D' }}><b>careers@ploutas.co.uk</b></a>
       </Section>
+
+      <Footer />
     </motion.div>
   );
 }

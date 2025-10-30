@@ -1,15 +1,21 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+// import { Box } from "@mui/material";
+
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
 import ParallaxImage from "../components/ParallaxImage";
 import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
+import CookieBanner from "../components/CookieBanner";
+
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
+import NewsLetter from "../components/NewsLetter";
 
 export default function Home() {
   const location = useLocation();
@@ -52,6 +58,8 @@ export default function Home() {
         Our advisory approach combines <b>strategic insight</b> with <b>execution excellence</b>, helping clients unlock opportunities that others overlook.
       </Section>
 
+      <NewsLetter />
+
       <ParallaxImage image="/images/parallax2.jpg" height="45vh" speed={10} />
 
       <Section id="family-office" title="Family Office">
@@ -79,7 +87,10 @@ export default function Home() {
 
       {/* <ParallaxImage image="/images/parallax3.jpg" height="45vh" speed={10} /> */}
 
-      {/* <Footer /> */}
+      <ContactForm />
+
+      <Footer />
+      <CookieBanner />
     </>
   );
 }

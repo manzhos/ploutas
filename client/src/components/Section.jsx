@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-export default function Section({ id, title, children, image, reverse }) {
+export default function Section({ id, title, children, image, reverse, py }) {
   return (
     <Box
       id={id}
@@ -10,7 +10,7 @@ export default function Section({ id, title, children, image, reverse }) {
         flexDirection: reverse ? "row-reverse" : "row",
         alignItems: "center",
         flexWrap: "wrap",
-        py: 8,
+        py: py || 8,
         ml: { md: "220px" },
         px: 3,
       }}
