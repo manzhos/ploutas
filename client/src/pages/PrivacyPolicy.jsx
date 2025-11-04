@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
       >
 
         <Section py={0.5}>
-          This Privacy Policy explains how <b>Ploutos Associates Limited</b> (“Ploutos”, “we”, “us”, “our”)
+          This Privacy Policy explains how <b>Ploutos Capital Limited</b> (“Ploutos”, “we”, “us”, “our”)
           collects, uses, and protects the personal data you provide when using our website and related
           services.
         </Section>

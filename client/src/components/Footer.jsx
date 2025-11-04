@@ -64,7 +64,7 @@ export default function Footer() {
               Office
             </Typography>
             <Typography variant="body2" sx={{ lineHeight: 1.8 }}>
-              Ploutas Associates Ltd.<br />
+              Ploutas Capital Ltd.<br />
               3rd Floor, 207 Regent Street<br />
               London, W1B 3HH, UK<br />
             </Typography>
@@ -138,12 +138,12 @@ export default function Footer() {
                 <Link href="https://www.instagram.com/ploutos.associates/" target="_blank" rel="noopener" sx={iconStyle}>
                   <Instagram size={22} />
                 </Link>
-                <Link href="https://www.linkedin.com/company/ploutos-associates/" target="_blank" rel="noopener" sx={iconStyle}>
+                <Link href="https://www.linkedin.com/groups/10061391/" target="_blank" rel="noopener" sx={iconStyle}>
                   <Linkedin size={22} />
                 </Link>
-                <Link href="https://twitter.com/Ploutas_com" target="_blank" rel="noopener" sx={iconStyle}>
+                {/* <Link href="https://twitter.com/Ploutas_com" target="_blank" rel="noopener" sx={iconStyle}>
                   <Twitter size={22} />
-                </Link>
+                </Link> */}
               </Box>
             </Box>
 

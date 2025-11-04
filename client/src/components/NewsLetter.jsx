@@ -28,13 +28,10 @@ export default function NewsLetter() {
 		// 👉 Здесь можно добавить реальную отправку данных:
 		// await fetch('/api/contact', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(formData) })
 
-		console.log("Form submitted:", formData);
-		setOpenSnackbar(true);
+		const url = 'https://db32587e.sibforms.com/serve/MUIFABgSdXrppOjiRUv1rZbmQmAUJMW9mOEqDNuoosFu30jT9rxk_Cwe9LY6BbytY7lslOBlJXMyp_zYZw-kr30vZifoDTRppbe5jYx6KdepvJfSRWenfVdOEbK-zy2vfpcYYzOvzRrRCineoKTz1jLCc8bTQVfrvI3itwVIHbd_n43VNNxaof9aaH21cqudH1pPYVhpNBunBBzR';
 
-		// Очистка формы
-		setFormData({
-			email: "",
-		});
+		// window.location.href = url; // redirect in the same tab
+		window.open(url, "_blank"); // to open in a new tab
 	};
 
 	const formFieldStyle = {
@@ -89,14 +86,14 @@ export default function NewsLetter() {
 					sx={{
 						color: "#ffffff",
 						fontWeight: 400,
-						mb: 4,
+						mb: 2,
 						textAlign: "center",
 					}}
 				>
 					Subscribe to the newsletter
 				</Typography>
 
-				<TextField
+				{/* <TextField
 					required
 					name="email"
 					label="Email"
@@ -105,10 +102,9 @@ export default function NewsLetter() {
 					value={formData.email}
 					onChange={handleChange}
 					sx={formFieldStyle}
-				/>
+				/> */}
 
-
-				<Box textAlign="center" sx={{ mt: 5 }}>
+				<Box textAlign="center" sx={{ mt: 3 }}>
 					<Button
 						type="submit"
 						variant="contained"

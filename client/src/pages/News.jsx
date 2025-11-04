@@ -45,7 +45,7 @@ export default function News() {
       </Box>
 
       <Typography variant='h3' sx={{ mt: 4, ml: { xs: "70px", md: "220px" }, textAlign: 'center' }}>
-        Ploutos Associates&nbsp;&mdash; Case Studies
+        Ploutos Capital&nbsp;&mdash; Case Studies
       </Typography>
 
       <Grid container spacing={2} sx={{ mt: 8, mb: 4, px: { xs: 2, md: 12 }, ml: { xs: 0, md: "220px" } }}>
@@ -60,11 +60,11 @@ export default function News() {
               <li>Delivery: Under 1 week</li>
             </ul>
 
-            • Forest development site financing
+            {/* • Forest development site financing
             <ul>
               <li>Budget: £600,000</li>
               <li>Delivery: 3 working days</li>
-            </ul>
+            </ul> */}
 
             • Bridge to development of large urban development project
             <ul>
@@ -72,7 +72,7 @@ export default function News() {
               <li>Delivery: Confidential</li>
             </ul>
 
-            • Luxury mansion in London
+            {/* • Luxury mansion in London
             <ul>
               <li>Budget: £8,000,000</li>
               <li>Delivery: Confidential</li>
@@ -113,7 +113,7 @@ export default function News() {
             <ul>
               <li>Budget: £4,800,000</li>
               <li>Delivery: Confidential</li>
-            </ul>
+            </ul> */}
           </Box>
         </Grid>
         <Grid item size={{ xs: 12, md: 4 }}>
@@ -131,11 +131,11 @@ export default function News() {
               <li>Budget: £1,300,000</li>
               <li>Delivery: Sold individually in 6 months, ~20% profit</li>
             </ul>
-            • Leisure development site acquisition
+            {/* • Leisure development site acquisition
             <ul>
               <li>Budget: £1,000,000</li>
               <li>Delivery: Plot sales over 12 months ~£1,200,000</li>
-            </ul>
+            </ul> */}
           </Box>
         </Grid>
         <Grid item size={{ xs: 12, md: 4 }}>
@@ -148,21 +148,21 @@ export default function News() {
               <li>Value: £8.3 million</li>
               <li>Delivery: 2021</li>
             </ul>
-            • Assisted purchase of luxury yacht
+            {/* • Assisted purchase of luxury yacht
             <ul>
               <li>Value: US$60 million</li>
               <li>Delivery: Closed in 3 weeks (2018)</li>
-            </ul>
+            </ul> */}
             • Financed super luxury property in Monaco
             <ul>
               <li>Value: €100 million</li>
               <li>Delivery: 2021</li>
             </ul>
-            • Financed pre-owned artwork (4 items)
+            {/* • Financed pre-owned artwork (4 items)
             <ul>
               <li>Value: US$3–5 million each</li>
               <li>Delivery: 2016</li>
-            </ul>
+            </ul> */}
           </Box>
         </Grid>
 

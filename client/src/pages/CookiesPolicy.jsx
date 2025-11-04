@@ -58,7 +58,7 @@ export default function CookiesPolicy() {
       >
         <Section py={0.5}>
           <Typography>
-            <b>Ploutos Associates Limited</b> (collectively “Ploutos”, “Us”, “We”, “Our” or “Company”) respects your
+            <b>Ploutos Capital Limited</b> (collectively “Ploutos”, “Us”, “We”, “Our” or “Company”) respects your
             data and privacy highly. For more information on how we use and protect your data, please see our{" "}
             <b>Privacy Policy</b>.
           </Typography>

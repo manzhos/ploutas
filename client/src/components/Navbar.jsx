@@ -178,7 +178,7 @@ export default function Navbar() {
                       <>
                         <Typography sx={{ mb: 1, fontWeight: 600, fontSize: 20 }}>Contact</Typography>
                         <Typography sx={{ fontSize: 14 }}>
-                          Ploutas Associates Ltd.<br />
+                          Ploutas Capital Ltd.<br />
                           <span style={{ color: '#B6915D' }}>3rd Floor, 207 Regent Street<br />London, W1B 3HH, UK</span>
                         </Typography>
                         <Typography sx={{ mt: 1, fontSize: 14 }}>
