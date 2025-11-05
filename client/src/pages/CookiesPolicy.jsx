@@ -58,7 +58,7 @@ export default function CookiesPolicy() {
       >
         <Section py={0.5}>
           <Typography>
-            <b>Ploutos Capital Limited</b> (collectively “Ploutos”, “Us”, “We”, “Our” or “Company”) respects your
+            <b>Ploutas Capital Limited</b> (collectively “Ploutas”, “Us”, “We”, “Our” or “Company”) respects your
             data and privacy highly. For more information on how we use and protect your data, please see our{" "}
             <b>Privacy Policy</b>.
           </Typography>
@@ -86,7 +86,7 @@ export default function CookiesPolicy() {
 
         <Section title="How Do We Use Cookies?" py={0.5}>
           <Typography>
-            Ploutos uses cookies in a range of ways to improve your experience on our website, including:
+            Ploutas uses cookies in a range of ways to improve your experience on our website, including:
           </Typography>
           <ul>
             <li>Keeping you signed in</li>
@@ -101,13 +101,13 @@ export default function CookiesPolicy() {
           </Typography>
 
           <Typography sx={{ mt: 1 }}>
-            <b>Functionality cookies –</b> Ploutos uses these so that we recognize you on our website and remember
+            <b>Functionality cookies –</b> Ploutas uses these so that we recognize you on our website and remember
             your preferences, such as your preferred language and location. Both first-party and third-party
             cookies are used.
           </Typography>
 
           <Typography sx={{ mt: 2 }}>
-            <b>Advertising cookies –</b> Ploutos uses these to collect information about your visit, content viewed,
+            <b>Advertising cookies –</b> Ploutas uses these to collect information about your visit, content viewed,
             links followed, and details about your browser, device, and IP address. Some of this data may be shared
             with third parties for advertising purposes.
           </Typography>
@@ -156,7 +156,7 @@ export default function CookiesPolicy() {
 
         <Section title="How to Contact Us" py={0.5}>
           <Typography>
-            If you have any questions about Ploutos’s cookie or privacy practices, please contact us:
+            If you have any questions about Ploutas’s cookie or privacy practices, please contact us:
             <br />
             <b>Email:</b> info@ploutas.co.uk <br />
             <b>Phone:</b> +44(0) 20 7692 5686 <br />
@@ -166,7 +166,7 @@ export default function CookiesPolicy() {
 
         <Section title="Right to Contact the Appropriate Authority" py={0.5}>
           <Typography>
-            Should you wish to report a complaint or if you feel that Ploutos has not addressed your concern in a
+            Should you wish to report a complaint or if you feel that Ploutas has not addressed your concern in a
             satisfactory manner, you may contact the UK Information Commissioner’s Office (ICO), or any competent
             data protection authority of an EU member state.{" "}
             <a

@@ -44,7 +44,7 @@ export default function News() {
       </Box>
 
       <Typography variant='h3' sx={{ mt: 4, ml: { xs: "70px", md: "220px" }, textAlign: 'center' }}>
-        Ploutos Capital&nbsp;&mdash; Case Studies
+        Ploutas Capital&nbsp;&mdash; Case Studies
       </Typography>
 
       <Section id="private-lending" title="Representative Transactions">

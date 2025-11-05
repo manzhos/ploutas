@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
       >
 
         <Section py={0.5}>
-          This Privacy Policy explains how <b>Ploutos Capital Limited</b> (“Ploutos”, “we”, “us”, “our”)
+          This Privacy Policy explains how <b>Ploutas Capital Limited</b> (“Ploutas”, “we”, “us”, “our”)
           collects, uses, and protects the personal data you provide when using our website and related
           services.
         </Section>
@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
 
         <Section title="Marketing" py={0.5}>
           <Typography>
-            Ploutos may send you updates and offers about our or partner services. You can opt out anytime by
+            Ploutas may send you updates and offers about our or partner services. You can opt out anytime by
             contacting us at <b>info@ploutas.co.uk</b>.
           </Typography>
         </Section>
@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
 
         <Section title="Other Websites" py={0.5}>
           <Typography>
-            Our website may link to other sites. Ploutos is not responsible for their privacy practices and
+            Our website may link to other sites. Ploutas is not responsible for their privacy practices and
             encourages you to review their policies.
           </Typography>
         </Section>
