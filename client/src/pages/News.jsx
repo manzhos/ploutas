@@ -49,9 +49,9 @@ export default function News() {
       </Typography>
 
       <Grid container spacing={2} sx={{ mt: 8, mb: 4, px: { xs: 2, md: 12 }, ml: { xs: 0, md: "220px" } }}>
-        <Grid item size={{ xs: 12, md: 4 }}>
-          <Box id="private-lending">
-            <Typography variant="h5" sx={{ mb: 2, color: '#B6915D', fontWeight: 'bold' }}>
+        <Grid item size={{ xs: 12, lg: 4 }}>
+          <Box id="private-lending" sx={{ pl: { xs: 0, lg: 2 }, pr: { xs: 0, lg: 2 } }}>
+            <Typography variant="h5" sx={{ mb: 2, color: '#B6915D', fontWeight: 'bold', minHeight: { xs: 0, lg: '64px' } }}>
               Representative Transactions
             </Typography>
             • Overseas client acquiring portfolio of residential assets
@@ -116,9 +116,9 @@ export default function News() {
             </ul> */}
           </Box>
         </Grid>
-        <Grid item size={{ xs: 12, md: 4 }}>
-          <Box id="private-lending">
-            <Typography variant="h5" sx={{ mb: 2, color: '#B6915D', fontWeight: 'bold' }}>
+        <Grid item size={{ xs: 12, lg: 4 }}>
+          <Box id="private-lending" sx={{ pl: { xs: 0, lg: 2 }, pr: { xs: 0, lg: 2 } }}>
+            <Typography variant="h5" sx={{ mb: 2, color: '#B6915D', fontWeight: 'bold', minHeight: { xs: 0, lg: '64px' } }}>
                UK Auction Finance Examples
             </Typography>
             • 3-bedroom auction property in Surrey
@@ -138,9 +138,9 @@ export default function News() {
             </ul> */}
           </Box>
         </Grid>
-        <Grid item size={{ xs: 12, md: 4 }}>
-          <Box id="private-lending">
-            <Typography variant="h5" sx={{ mb: 2, color: '#B6915D', fontWeight: 'bold' }}>
+        <Grid item size={{ xs: 12, lg: 4 }}>
+          <Box id="private-lending" sx={{ pl: { xs: 0, lg: 2 }, pr: { xs: 0, lg: 2 } }}>
+            <Typography variant="h5" sx={{ mb: 2, color: '#B6915D', fontWeight: 'bold', minHeight: { xs: 0, lg: '64px' } }}>
               Luxury Finance Examples
             </Typography>
             • Refinanced fleet of luxury cars
