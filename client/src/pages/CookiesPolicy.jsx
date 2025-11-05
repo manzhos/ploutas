@@ -33,7 +33,7 @@ export default function CookiesPolicy() {
           color: "white",
           flexDirection: "column",
           textAlign: "center",
-          ml: { xs: "0px", md: "110px" },
+          pl: { xs: "0px", md: "110px" },
           px: 3,
         }}
       >

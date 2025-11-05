@@ -32,7 +32,7 @@ export default function News() {
           color: 'white',
           flexDirection: 'column',
           textAlign: 'center',
-          ml: { xs: "0px", md: "110px" },
+          pl: { xs: "0px", md: "110px" },
           px: 3,
         }}
       >
@@ -44,8 +44,8 @@ export default function News() {
         </Typography> */}
       </Box>
 
-      <Typography variant='h3' sx={{ mt: 4, ml: { xs: "70px", md: "220px" }, textAlign: 'center' }}>
-        Ploutos Capital&nbsp;&mdash; Case Studies
+      <Typography sx={{ mt: 8, ml: { xs: "0", md: "220px" }, textAlign: 'center', fontWeight: 800, fontSize: { xs: "2rem", md: "3rem" } }}>
+        Ploutos Capital&nbsp;&mdash; Case&nbsp;Studies
       </Typography>
 
       <Grid container spacing={2} sx={{ mt: 8, mb: 4, px: { xs: 2, md: 12 }, ml: { xs: 0, md: "220px" } }}>

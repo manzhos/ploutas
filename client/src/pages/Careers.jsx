@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Section from "../components/Section";
 import Footer from "../components/Footer";
+import { blue } from '@mui/material/colors';
 
 export default function Careers() {
   return (
@@ -15,6 +16,7 @@ export default function Careers() {
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <Navbar />
+      {/* <div style={{ width:'100%', backgroundColor:'blue' }}>man</div> */}
       <Box
         sx={{
           height: '50vh',
@@ -30,7 +32,7 @@ export default function Careers() {
           color: 'white',
           flexDirection: 'column',
           textAlign: 'center',
-          ml: { xs: "0px", md: "110px" },
+          pl: { xs: "0px", md: "110px" },
           px: 3,
         }}
       >
