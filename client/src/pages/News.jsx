@@ -45,7 +45,7 @@ export default function News() {
       </Box>
 
       <Typography sx={{ mt: 8, ml: { xs: "0", md: "220px" }, textAlign: 'center', fontWeight: 800, fontSize: { xs: "2rem", md: "3rem" } }}>
-        Ploutos Capital&nbsp;&mdash; Case&nbsp;Studies
+        Ploutas Capital&nbsp;&mdash; Case&nbsp;Studies
       </Typography>
 
       <Grid container spacing={2} sx={{ mt: 8, mb: 4, px: { xs: 2, md: 12 }, ml: { xs: 0, md: "220px" } }}>
